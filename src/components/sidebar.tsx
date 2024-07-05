@@ -1,11 +1,11 @@
 import json from "./sidebar.json";
 import "./index.css";
-import { useState } from "react";
+// import { useState } from "react";
 
-interface departmentProps {
-  department: string;
-  subDepartment: string[];
-}
+// interface departmentProps {
+//   department: string;
+//   subDepartment: string[];
+// }
 
 const Sidebar = () => {
   // const [selected, setSelected] = useState<departmentProps[]>();
