@@ -26,11 +26,11 @@ function App() {
         },
         {
           label: "product_design",
-          id: 6,
+          id: 7,
         },
         {
           label: "web_design",
-          id: 6,
+          id: 8,
         },
       ],
     },
@@ -95,8 +95,8 @@ function App() {
       className="App"
       style={{ padding: "20px", backgroundColor: "#f5f5f5" }}
     >
-      {config.map((item) => (
-        <details key={item.id} style={{ marginBottom: "10px" }}>
+      {config.map((item, i) => (
+        <details key={i} style={{ marginBottom: "10px" }}>
           <summary style={{ display: "flex", gap: "0.2rem" }}>
             <input
               type="checkbox"
@@ -105,13 +105,14 @@ function App() {
               onChange={(e) => handleClick(e, item.id)}
             />
             <label>{item.label}</label>
+            <span>({item.children.length})</span>
           </summary>
 
           <div style={{ marginLeft: "20px" }}>
             {item.children &&
-              item.children.map((subItem) => (
+              item.children.map((subItem, i) => (
                 <ChildBox
-                  key={subItem.id}
+                  key={i}
                   child={subItem}
                   parentId={item.id}
                   childId={subItem.id}
