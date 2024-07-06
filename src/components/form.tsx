@@ -3,6 +3,7 @@ import FormGroup from "@mui/material/FormGroup";
 import { useState } from "react";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
+
 interface formDataProps {
   name?: string;
   number?: number | string;
@@ -41,7 +42,6 @@ const Form = () => {
         id="outlined-basic"
         label="Number"
         variant="outlined"
-        // type="number"
         onChange={(e) =>
           setFormData({ ...formData, number: Number(e.target.value) })
         }

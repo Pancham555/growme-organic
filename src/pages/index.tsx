@@ -4,11 +4,10 @@ import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import Sidebar from "../components/sidebar";
-// import { DataGrid } from "@mui/x-data-grid";
 
 interface postsProps {
-  userId: number;
   id: number;
+  userId: number;
   title: string;
   body: string;
 }
@@ -27,6 +26,7 @@ const Home = () => {
     const name = localStorage.getItem("name");
     const number = localStorage.getItem("number");
     const email = localStorage.getItem("email");
+
     if (!name || !number || !email) {
       navigate("/login");
     }
@@ -70,38 +70,6 @@ const Home = () => {
           disableRowSelectionOnClick
         />
       </Box>
-      {/* <div
-        style={{
-          display: "flex",
-          gap: "1rem",
-          flexWrap: "wrap",
-          placeItems: "center",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "85%",
-        }}
-      >
-        {posts.map((data, index) => {
-          return (
-            <Card variant="outlined" key={index} style={{ maxWidth: "10rem" }}>
-              <CardContent>
-                <div
-                  className=""
-                  style={{
-                    fontSize: "1.5rem",
-                    fontWeight: "bold",
-                    marginBottom: "1rem",
-                    padding: "1rem",
-                  }}
-                >
-                  {data.title}
-                </div>
-                <div className="">{data.body}</div>
-              </CardContent>
-            </Card>
-          );
-        })}
-      </div> */}
     </div>
   );
 };
