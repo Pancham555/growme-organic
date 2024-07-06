@@ -3,29 +3,33 @@ import "./index.css";
 function App() {
   const config = [
     {
-      label: "Parent1",
+      label: "customer_service",
       id: 1,
       children: [
         {
-          label: "Child p1.c1",
+          label: "support",
           id: 2,
         },
         {
-          label: "Child p1.c2",
+          label: "customer_success",
           id: 3,
-        },
-        {
-          label: "Childp1.c3",
-          id: 4,
         },
       ],
     },
     {
-      label: "Parent2",
+      label: "design",
       id: 5,
       children: [
         {
-          label: "Childp2.c1",
+          label: "graphic_design",
+          id: 6,
+        },
+        {
+          label: "product_design",
+          id: 6,
+        },
+        {
+          label: "web_design",
           id: 6,
         },
       ],
