@@ -1,10 +1,17 @@
 [
   {
-    "department": "customer_service",
-    "sub_departments": ["support", "customer_success"]
+    "department": { "name": "customer_service", "selected": false },
+    "sub_departments": [
+      { "name": "support", "selected": false },
+      { "name": "customer_success", "selected": false }
+    ]
   },
   {
-    "department": "design",
-    "sub_departments": ["graphic_design", "product_design", "web_design"]
+    "department": { "name": "design", "selected": false },
+    "sub_departments": [
+      { "name": "graphic_design", "selected": false },
+      { "name": "product_design", "selected": false },
+      { "name": "web_design", "selected": false }
+    ]
   }
 ]
